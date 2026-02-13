@@ -4,11 +4,11 @@ This repository contains the analysis code for our study on the genetic ancestry
 
 ## Citation
 
-**Manuscript Status:** Submitted to *Heredity* (2026)
+**Manuscript Status:** in final stages
 
 If you use this code or findings in your research, please cite:
 
-> [Authors] (2026). Chalcolithic Levant ancestry reveals a Mesopotamian genetic contribution in the Peqi'in population. *Heredity* (in review).
+(will write citation here after publication / if doi is available after publishing it in the bioarchives)
 
 **Note:** Citation will be updated with DOI and publication details upon acceptance.
 
@@ -78,7 +78,7 @@ The analyses use the Allen Ancient DNA Resource (AADR) v62.0 dataset with both 1
 
 ### Data Requirements
 
-Download the AADR v62.0 dataset from [Reich Lab](https://reich.hms.harvard.edu/allen-ancient-dna-resource-aadr-downloadable-genotypes-present-day-and-ancient-dna-data):
+Download the AADR v62.0 dataset from [Reich Lab](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FFIDCW):
 
 - `v62.0_1240k_public.{geno,snp,ind,anno}`
 - `v62.0_HO_public.{geno,snp,ind,anno}`
@@ -92,14 +92,6 @@ AADR_v62/
 ├── v62.0_1240k_public.anno
 └── (similar files for HO dataset)
 ```
-
-### System Requirements
-
-- **RAM:** 16 GB minimum (32 GB recommended for full qpAdm analysis)
-- **Storage:** ~50 GB for data and intermediate files
-- **CPU:** Multi-core recommended (scripts use parallel processing where available)
-
----
 
 ## Installation
 
@@ -280,42 +272,9 @@ Multiple outgroup sets are tested (see `qpAdm_complete_analysis.R` for details):
 - Africans (Mbuti, Ethiopia_4500BP)
 - Regional hunter-gatherers (Natufian, Pinarbasi, Kotias)
 
----
-
-## Troubleshooting
-
-### Common Issues
-
-**1. "File not found" errors**
-- Check that AADR paths are correctly set
-- Ensure data files are uncompressed (`.geno`, not `.geno.gz`)
-
-**2. Memory errors in qpAdm**
-- Reduce the number of models tested
-- Use the simplified model generation functions
-- Increase system swap space
-
-**3. PLINK/EIGENSOFT not found**
-- Add tools to PATH: `export PATH=$PATH:/path/to/eigensoft/bin`
-- Or specify full paths in system() calls
-
-**4. admixtools errors**
-- Ensure you're using admixtools v2.x (not v1.x)
-- Check that f2 statistics are being computed correctly
-- Verify population names match exactly between .ind file and scripts
-
-**5. Low SNP counts in qpAdm**
-- Some population combinations have limited overlap
-- This is expected for certain ancient samples
-- Results with <10,000 SNPs should be interpreted cautiously
-
----
-
 ## Data Availability
 
 - **AADR v62.0:** [Reich Lab Downloads](https://reich.hms.harvard.edu/allen-ancient-dna-resource-aadr-downloadable-genotypes-present-day-and-ancient-dna-data)
-- **Analysis results:** Available upon publication
-- **Processed data:** Contact corresponding author
 
 ---
 
