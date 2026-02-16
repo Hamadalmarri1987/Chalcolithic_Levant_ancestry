@@ -2,7 +2,7 @@
 library(admixtools)
 
 # CONFIGURATION 
-aadr_path <- "C:/Users/WAQAS/Documents/CG/1/22/AA"
+aadr_path <- "path/to/aadr/folder"
 prefix <- file.path(aadr_path, "v62.0_1240k_public")
 
 outgroups <- c(
@@ -191,6 +191,7 @@ write_results_to_docx <- function(results_list, file_name = "qpwave_results.docx
 
 
 write_results_to_docx(results, "qpwave_results.docx")
+
 
 
 
