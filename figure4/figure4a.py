@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # -----------------------------
 # CONFIG
 # -----------------------------
-XLSX_PATH = r"C:\Users\WAQAS\Downloads\graphs_for_research\Copy of S1_qpAdm.xlsx"
+XLSX_PATH = r"path/to/qpadm_excel"
 SHEET_NAME = "3way_passing_models"
 
 KEEP_OPAQUE_1BASED = {2, 5, 6}
@@ -156,3 +156,4 @@ ax.legend(
 
 fig.tight_layout()
 plt.show()
+
