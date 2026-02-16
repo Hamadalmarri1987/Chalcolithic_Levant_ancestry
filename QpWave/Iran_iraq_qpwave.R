@@ -7,7 +7,7 @@
 library(admixtools)
 
 #Set working directory and paths
-aadr_path <- "C:/Users/WAQAS/Documents/CG/1/22/AA"
+aadr_path <- "path/to/aadr/folder"
 prefix <- file.path(aadr_path, "v62.0_1240k_public")
 
 right_set_2 =c(
@@ -274,3 +274,4 @@ for(i in seq_along(combo_list)){
 
 
 results
+
