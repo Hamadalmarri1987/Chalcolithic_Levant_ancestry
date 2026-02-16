@@ -6,9 +6,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -----------------------------
+
 # CONFIG
-# -----------------------------
+
 XLSX_PATH = r"path/to/qpadm_excel"
 SHEET_NAME = "3way_passing_models"
 
@@ -27,9 +27,9 @@ COMPONENTS = [
           ["Mesopotamia_se", "Meso_se", "E_se"]),
 ]
 
-# -----------------------------
+
 # Helpers
-# -----------------------------
+
 def pick_column(df, candidates):
     for c in candidates:
         if c in df.columns:
@@ -42,9 +42,9 @@ def fmt_p(p):
 def fmt_se(x):
     return f"{int(x*1000)/1000:.3f}"  # truncate, no rounding
 
-# -----------------------------
+
 # Load & clean
-# -----------------------------
+
 df = pd.read_excel(XLSX_PATH, sheet_name=SHEET_NAME)
 
 col_p = pick_column(df, ["p", "pval", "p_value", "p-value"])
@@ -68,9 +68,9 @@ df = df.dropna(subset=[v for comp in resolved.values() for v in comp.values()])
 df = df.sort_values(col_p, ascending=False).reset_index(drop=True)
 df["prominent"] = [(i + 1) in KEEP_OPAQUE_1BASED for i in range(len(df))]
 
-# -----------------------------
+
 # Plot
-# -----------------------------
+
 n = len(df)
 x = np.arange(n)
 width = 0.25
@@ -112,9 +112,8 @@ for i, row in df.iterrows():
                     fontsize=10,
                     fontweight="bold")
 
-# -----------------------------
 # X-axis labels
-# -----------------------------
+
 ax.set_xticks(x)
 ax.set_xticklabels([
     f"p={fmt_p(row[col_p])}\n"
@@ -124,9 +123,8 @@ ax.set_xticklabels([
     for _, row in df.iterrows()
 ], fontsize=9)
 
-# -----------------------------
 # Cosmetics
-# -----------------------------
+
 ax.set_title(
     "All qpAdm models with p ≥ 0.99\n"
     "Optimal models bars: lower SE (≤ 0.08)\n"
@@ -156,4 +154,5 @@ ax.legend(
 
 fig.tight_layout()
 plt.show()
+
 
