@@ -283,6 +283,11 @@ Multiple outgroup sets are tested (see `qpAdm_complete_analysis.R` for details):
 This work uses data from the Allen Ancient DNA Resource (AADR) curated by the Reich Lab at Harvard Medical School. We thank the admixtools developers for their excellent software package.
 
 ---
+## Data Availibility Statement
+The datasets analysed during the current study are publicly available in the Harvard Dataverse repository at https://doi.org/10.7910/DVN/FFIDCW.
+No new primary data were generated. All scripts and analytical workflows used for data processing and statistical analyses are available in the GitHub repository: https://github.com/Hamadalmarri1987/Chalcolithic_Levant_ancestry
+
+---
 
 ## License
 
