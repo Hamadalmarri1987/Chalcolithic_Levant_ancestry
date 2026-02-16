@@ -7,7 +7,7 @@
 library(admixtools)
 
 #Set working directory and paths
-aadr_path <- "C:/Users/WAQAS/Documents/CG/1/22/AA"
+aadr_path <- "path/to/aadr/folder"
 prefix <- file.path(aadr_path, "v62.0_1240k_public")
 
 #Preparing for f2
@@ -161,5 +161,6 @@ qp_iraq_1$rankdrop
 
 qp_iraq_2 = qpwave(f2_blocks_iraq_outgroups_set_2, left=left_iraq, right=right_set_2)
 qp_iraq_2$rankdrop
+
 
 
