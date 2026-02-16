@@ -94,9 +94,9 @@ def plot_dominance_ranges(
 
     ax.barh(y, width, left=left, color=colors)
 
-    # -----------------------------
+    
     # AXES LABELS & TICKS (SIZES)
-    # -----------------------------
+    
     ax.set_yticks(y)
     ax.set_yticklabels(plot_df["component"], fontsize=9)
 
@@ -108,9 +108,9 @@ def plot_dominance_ranges(
 
     ax.invert_yaxis()
 
-    # -----------------------------
+    
     # ANNOTATIONS
-    # -----------------------------
+    
     for i, row in plot_df.reset_index(drop=True).iterrows():
         a = int(row["min_prop"] * 100)
         b = int(row["max_prop"] * 100)
@@ -133,7 +133,7 @@ def plot_dominance_ranges(
 
 
 def main():
-    excel_path = r"C:\\Users\\WAQAS\\Downloads\\graphs_for_research\\Copy of S1_qpAdm.xlsx"
+    excel_path = r""path/to/qpadm_excel"
     sheet_name = "3way_passing_models"
 
     p_min = 0.60
@@ -201,3 +201,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
