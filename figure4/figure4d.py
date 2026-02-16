@@ -35,9 +35,9 @@ def compute_dominance_ranges(
     df = df.copy()
     df = coerce_numeric(df, numeric_cols)
 
-    # ---------------------------------
+    
     # NO p-VALUE FILTERING (ONLY CHANGE)
-    # ---------------------------------
+    
     f = df.copy()
 
     se_present = f[list(se_cols.values())].copy()
@@ -130,7 +130,7 @@ def plot_dominance_ranges(
 
 
 def main():
-    excel_path = r"C:\\Users\\WAQAS\\Downloads\\graphs_for_research\\Copy of S1_qpAdm.xlsx"
+    excel_path = r"path/to/qpadm_excel"
     sheet_name = "3way_passing_models"
 
     p_min = 0.60
@@ -199,3 +199,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
